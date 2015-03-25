@@ -12,11 +12,11 @@ public class Corpus {
     Vocabulary voc;
     
     //The files in this path are already tokenized and removed stop words in Python
-    public Corpus(String path)
+    public Corpus(String path, int min_count)
     {    	
     	// Iterate all files and get vocabulary, word id maps.
     	voc = new Vocabulary();
-    	voc.getVocabulary(path + "data_words\\");
+    	voc.getVocabulary(path + "data_words\\", min_count);
     	num_terms = voc.size();
     	System.out.println("number of terms   :" + num_terms);
     	List<String> train = Tools.listDir(path + "train\\");

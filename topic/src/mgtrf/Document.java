@@ -71,10 +71,14 @@ public class Document {
 			String word = line.substring(0, line.indexOf(':'));
 			List<String> list = Arrays.asList(line.substring(line.indexOf('[') + 1, line.indexOf(']')).split(","));
 			num_e += list.size();
+			if(!voc.wordToId.containsKey(word))
+    			continue;
 			int wordid = voc.wordToId.get(word);
 			List<Integer> adjList = new ArrayList<Integer>();
 			for(String w: list)
 			{
+				if(!voc.wordToId.containsKey(w.trim()))
+					continue;
 				adjList.add(voc.wordToId.get(w.trim()));
 			}
 			adj.put(wordid, adjList);
@@ -93,7 +97,7 @@ public class Document {
     		{
     			for(int adj2id:adj.get(adjid))
     			{
-    				if(adj2id != wordid && !adjlist2.contains(adj2id))
+    				if(adj2id != wordid && !adjlist2.contains(adj2id) && voc.idToWord.containsKey(adj2id))
     				{
     					adjlist2.add(adj2id);
     					num_e2++;
@@ -113,6 +117,8 @@ public class Document {
     	String[] ws = text.split(" ");
     	for(String word: ws)  //put word count pair to map
     	{
+    		if(!voc.wordToId.containsKey(word))
+    			continue;
     		int id = voc.wordToId.get(word);
     		if(!wordCount.containsKey(id))
     		{

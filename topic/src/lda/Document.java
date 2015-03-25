@@ -43,6 +43,8 @@ public class Document {
     	String[] ws = text.split(" ");
     	for(String word: ws)  //put word count pair to map
     	{
+    		if(!voc.wordToId.containsKey(word))
+    			continue;
     		int id = voc.wordToId.get(word);
     		if(!wordCount.containsKey(id))
     		{

@@ -25,7 +25,7 @@ public class Vocabulary {
 		return wordCount.size();
 	}
 	
-	public void getVocabulary(String path)
+	public void getVocabulary(String path, int min_count)
 	{
 		List<String> dir = Tools.listDir(path);
     	for(String d : dir)
@@ -46,13 +46,29 @@ public class Vocabulary {
     			}
     			else
     			{
-    				wordToId.put(word, this.size());
-    				idToWord.put(this.size(), word);
     				wordCount.put(word, 1);	
     			}
     		}
 
     	}
+     	//Need to create a copy of map, otherwise concurrent exception
+    	Map<String, Integer> temp_wordCount = new TreeMap<String, Integer>(wordCount);
+    	int id = 0;
+    	for (Map.Entry<String, Integer> entry : temp_wordCount.entrySet())
+		{
+    		int count = entry.getValue();
+    		String word = entry.getKey();
+    		if(count < min_count)
+    		{
+    			wordCount.remove(word);    			
+    		}
+    		else
+    		{
+    			idToWord.put(id, word);
+    			wordToId.put(word, id);
+    			id++;
+    		}
+		}
     	printToFile(path + "..\\idAndWord");
 	}
 	

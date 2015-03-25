@@ -452,63 +452,63 @@ public class RunLDA {
 	
 	public static void main(String[] args) {
 				
-    	corpus = new Corpus(path);
+    	corpus = new Corpus(path, 5);
 
     	RunLDA.run_em(corpus, 5, 0.2, 0.2);
-    	RunLDA.run_em(corpus, 10, 0.2, 0.2);
-    	RunLDA.run_em(corpus, 20, 0.2, 0.2);
-    	RunLDA.run_em(corpus, 50, 0.2, 0.2);
-    	RunLDA.run_em(corpus, 100, 0.2, 0.2);
-    	RunLDA.run_em(corpus, 5, 0.2, 0.4);
-    	RunLDA.run_em(corpus, 10, 0.2, 0.4);
-    	RunLDA.run_em(corpus, 20, 0.2, 0.4);
-    	RunLDA.run_em(corpus, 50, 0.2, 0.4);
-    	RunLDA.run_em(corpus, 100, 0.2, 0.4);
-    	RunLDA.run_em(corpus, 5, 0.2, 0.6);
-    	RunLDA.run_em(corpus, 10, 0.2, 0.6);
-    	RunLDA.run_em(corpus, 20, 0.2, 0.6);
-    	RunLDA.run_em(corpus, 50, 0.2, 0.6);
-    	RunLDA.run_em(corpus, 100, 0.2, 0.6);
-    	RunLDA.run_em(corpus, 5, 0.2, 0.8);
-    	RunLDA.run_em(corpus, 10, 0.2, 0.8);
-    	RunLDA.run_em(corpus, 20, 0.2, 0.8);
-    	RunLDA.run_em(corpus, 50, 0.2, 0.8);
-    	RunLDA.run_em(corpus, 100, 0.2, 0.8);
-    	RunLDA.run_em(corpus, 5, 0.4, 0.4);
-    	RunLDA.run_em(corpus, 10, 0.4, 0.4);
-    	RunLDA.run_em(corpus, 20, 0.4, 0.4);
-    	RunLDA.run_em(corpus, 50, 0.4, 0.4);
-    	RunLDA.run_em(corpus, 100, 0.4, 0.4);
-    	RunLDA.run_em(corpus, 5, 0.4, 0.6);
-    	RunLDA.run_em(corpus, 10, 0.4, 0.6);
-    	RunLDA.run_em(corpus, 20, 0.4, 0.6);
-    	RunLDA.run_em(corpus, 50, 0.4, 0.6);
-    	RunLDA.run_em(corpus, 100, 0.4, 0.6);
-    	RunLDA.run_em(corpus, 5, 0.4, 0.8);
-    	RunLDA.run_em(corpus, 10, 0.4, 0.8);
-    	RunLDA.run_em(corpus, 20, 0.4, 0.8);
-    	RunLDA.run_em(corpus, 50, 0.4, 0.8);
-    	RunLDA.run_em(corpus, 100, 0.4, 0.8);
-    	RunLDA.run_em(corpus, 5, 0.6, 0.6);
-    	RunLDA.run_em(corpus, 10, 0.6, 0.6);
-    	RunLDA.run_em(corpus, 20, 0.6, 0.6);
-    	RunLDA.run_em(corpus, 50, 0.6, 0.6);
-    	RunLDA.run_em(corpus, 100, 0.6, 0.6);
-    	RunLDA.run_em(corpus, 5, 0.6, 0.8);
-    	RunLDA.run_em(corpus, 10, 0.6, 0.8);
-    	RunLDA.run_em(corpus, 20, 0.6, 0.8);
-    	RunLDA.run_em(corpus, 50, 0.6, 0.8);
-    	RunLDA.run_em(corpus, 100, 0.6, 0.8);
-    	RunLDA.run_em(corpus, 5, 0.8, 0.8);
-    	RunLDA.run_em(corpus, 10, 0.8, 0.8);
-    	RunLDA.run_em(corpus, 20, 0.8, 0.8);
-    	RunLDA.run_em(corpus, 50, 0.8, 0.8);
-    	RunLDA.run_em(corpus, 100, 0.8, 0.8);
-    	try {
-			FileUtils.writeStringToFile(new File(path + "perplex_mgtrf"),perplexity);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//    	RunLDA.run_em(corpus, 10, 0.2, 0.2);
+//    	RunLDA.run_em(corpus, 20, 0.2, 0.2);
+//    	RunLDA.run_em(corpus, 50, 0.2, 0.2);
+//    	RunLDA.run_em(corpus, 100, 0.2, 0.2);
+//    	RunLDA.run_em(corpus, 5, 0.2, 0.4);
+//    	RunLDA.run_em(corpus, 10, 0.2, 0.4);
+//    	RunLDA.run_em(corpus, 20, 0.2, 0.4);
+//    	RunLDA.run_em(corpus, 50, 0.2, 0.4);
+//    	RunLDA.run_em(corpus, 100, 0.2, 0.4);
+//    	RunLDA.run_em(corpus, 5, 0.2, 0.6);
+//    	RunLDA.run_em(corpus, 10, 0.2, 0.6);
+//    	RunLDA.run_em(corpus, 20, 0.2, 0.6);
+//    	RunLDA.run_em(corpus, 50, 0.2, 0.6);
+//    	RunLDA.run_em(corpus, 100, 0.2, 0.6);
+//    	RunLDA.run_em(corpus, 5, 0.2, 0.8);
+//    	RunLDA.run_em(corpus, 10, 0.2, 0.8);
+//    	RunLDA.run_em(corpus, 20, 0.2, 0.8);
+//    	RunLDA.run_em(corpus, 50, 0.2, 0.8);
+//    	RunLDA.run_em(corpus, 100, 0.2, 0.8);
+//    	RunLDA.run_em(corpus, 5, 0.4, 0.4);
+//    	RunLDA.run_em(corpus, 10, 0.4, 0.4);
+//    	RunLDA.run_em(corpus, 20, 0.4, 0.4);
+//    	RunLDA.run_em(corpus, 50, 0.4, 0.4);
+//    	RunLDA.run_em(corpus, 100, 0.4, 0.4);
+//    	RunLDA.run_em(corpus, 5, 0.4, 0.6);
+//    	RunLDA.run_em(corpus, 10, 0.4, 0.6);
+//    	RunLDA.run_em(corpus, 20, 0.4, 0.6);
+//    	RunLDA.run_em(corpus, 50, 0.4, 0.6);
+//    	RunLDA.run_em(corpus, 100, 0.4, 0.6);
+//    	RunLDA.run_em(corpus, 5, 0.4, 0.8);
+//    	RunLDA.run_em(corpus, 10, 0.4, 0.8);
+//    	RunLDA.run_em(corpus, 20, 0.4, 0.8);
+//    	RunLDA.run_em(corpus, 50, 0.4, 0.8);
+//    	RunLDA.run_em(corpus, 100, 0.4, 0.8);
+//    	RunLDA.run_em(corpus, 5, 0.6, 0.6);
+//    	RunLDA.run_em(corpus, 10, 0.6, 0.6);
+//    	RunLDA.run_em(corpus, 20, 0.6, 0.6);
+//    	RunLDA.run_em(corpus, 50, 0.6, 0.6);
+//    	RunLDA.run_em(corpus, 100, 0.6, 0.6);
+//    	RunLDA.run_em(corpus, 5, 0.6, 0.8);
+//    	RunLDA.run_em(corpus, 10, 0.6, 0.8);
+//    	RunLDA.run_em(corpus, 20, 0.6, 0.8);
+//    	RunLDA.run_em(corpus, 50, 0.6, 0.8);
+//    	RunLDA.run_em(corpus, 100, 0.6, 0.8);
+//    	RunLDA.run_em(corpus, 5, 0.8, 0.8);
+//    	RunLDA.run_em(corpus, 10, 0.8, 0.8);
+//    	RunLDA.run_em(corpus, 20, 0.8, 0.8);
+//    	RunLDA.run_em(corpus, 50, 0.8, 0.8);
+//    	RunLDA.run_em(corpus, 100, 0.8, 0.8);
+//    	try {
+//			FileUtils.writeStringToFile(new File(path + "perplex_mgtrf"),perplexity);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
     	System.out.println("Complete!");
 	}
 

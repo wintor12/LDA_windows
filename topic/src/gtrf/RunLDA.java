@@ -430,10 +430,10 @@ public class RunLDA {
 	
 	public static void main(String[] args) {
 				
-    	corpus = new Corpus(path);
+    	corpus = new Corpus(path, 5);
     	
-    	RunLDA.run_em(corpus, 5, 0.2);
-//    	RunLDA.run_em(corpus, 10, 0.2);
+//    	RunLDA.run_em(corpus, 5, 0.2);
+    	RunLDA.run_em(corpus, 10, 0.2);
 //    	RunLDA.run_em(corpus, 20, 0.2);
 //    	RunLDA.run_em(corpus, 50, 0.2);
 //    	RunLDA.run_em(corpus, 100, 0.2);

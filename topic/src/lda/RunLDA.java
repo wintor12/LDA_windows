@@ -355,17 +355,17 @@ public class RunLDA {
 	
 	public static void main(String[] args) {
 				
-    	corpus = new Corpus(path);
+    	corpus = new Corpus(path, 5);
     	RunLDA.run_em(corpus, 5);
-    	RunLDA.run_em(corpus, 10);
-    	RunLDA.run_em(corpus, 20);
-    	RunLDA.run_em(corpus, 50);
-    	RunLDA.run_em(corpus, 100);
-    	try {
-			FileUtils.writeStringToFile(new File(path + "perplex_lda"),perplexity);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+//    	RunLDA.run_em(corpus, 10);
+//    	RunLDA.run_em(corpus, 20);
+//    	RunLDA.run_em(corpus, 50);
+//    	RunLDA.run_em(corpus, 100);
+//    	try {
+//			FileUtils.writeStringToFile(new File(path + "perplex_lda"),perplexity);
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
     	System.out.println("Complete!");
 	}
 
