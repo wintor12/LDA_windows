@@ -509,6 +509,7 @@ public class RunLDA {
 //		} catch (IOException e) {
 //			e.printStackTrace();
 //		}
+    	
     	System.out.println("Complete!");
 	}
 
